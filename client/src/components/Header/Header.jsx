@@ -10,7 +10,7 @@ import Cart from "../Cart/Cart";
 
 
 const Header = () => {
-    return <header>
+    return <header
              className={`main-header ${scrolled ? "sticky-header" : ""}`}
             >
                 <div className="header-content">
@@ -20,17 +20,15 @@ const Header = () => {
                         <li>Categories</li>
                     </ul>
                     <div className="center" onClick={() => navigate("/")}>
-                        JSDEVSTORE.
+                        Dukaan.
                     </div>
                     <div className="right">
                         <TbSearch onClick={() => setSearchModal(true)} />
                         <AiOutlineHeart />
                         <span
                             className="cart-icon"
-                            onClick={() => setShowCart(true)}
                         >
                             <CgShoppingCart />
-                            {!!cartCount && <span>{cartCount}</span>}
                         </span>
                     </div>
                 </div>
